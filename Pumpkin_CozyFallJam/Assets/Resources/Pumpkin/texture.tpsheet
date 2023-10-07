@@ -1,0 +1,18 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://assetstore.unity.com/packages/tools/sprite-management/texturepacker-importer-16641
+#
+# created with Free texture packer v0.6.7
+# http://free-tex-packer.com
+#
+:format=40300
+:texture=texture.png
+:size=802x1413
+:pivotpoints=enabled
+:borders=disabled
+
+pumpkinleft.png;2;700;397;711; 0.5;0.5; 0;0;0;0
+pumpkinright.png;403;700;397;711; 0.5;0.5; 0;0;0;0
+pumpkinstill.png;2;2;397;694; 0.5;0.5; 0;0;0;0
