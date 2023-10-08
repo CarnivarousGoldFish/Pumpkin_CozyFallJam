@@ -16,7 +16,7 @@ public class SettingsController : MonoBehaviour
 
     [SerializeField] private VolumeSO volumeSO;
 
-    [SerializeField] private GameObject settingsMenu;
+    public GameObject settingsMenu;
 
     private float musicVolumeVal = 0.5f;
     private float sfxVolumeVal = 0.5f;
@@ -36,6 +36,12 @@ public class SettingsController : MonoBehaviour
             Destroy(gameObject);
         }
 
+        musicSlider.value = volumeSO.musicVolume;
+        sfxSlider.value = volumeSO.sfxVolume;
+
+        mixer.SetFloat(MUSIC_VOLUME, Mathf.Log10(volumeSO.musicVolume) * 20);
+        mixer.SetFloat(SFX_VOLUME, Mathf.Log10(volumeSO.musicVolume) * 20);
+
         musicSlider.onValueChanged.AddListener(SetMusicVolume);
         sfxSlider.onValueChanged.AddListener(SetSFXVolume);
 
@@ -43,6 +49,9 @@ public class SettingsController : MonoBehaviour
 
     void Update()
     {
+        GetMusicVolume();
+        GetSFXVolume();
+
         mixer.SetFloat(MUSIC_VOLUME, Mathf.Log10(musicVolumeVal) * 20);
         mixer.SetFloat(SFX_VOLUME, Mathf.Log10(sfxVolumeVal) * 20);
     }
@@ -66,6 +75,19 @@ public class SettingsController : MonoBehaviour
         sfxVolumeVal = volumeSO.sfxVolume;
     }
 
-    pr
+    public void OpenSettings()
+    {
+        settingsMenu.gameObject.SetActive(true);
+    }
+
+    public void CloseSettings()
+    {
+        settingsMenu.gameObject.SetActive(false);
+    }
+
+    public void SetSettingsPanel(GameObject panel)
+    {
+        settingsMenu = panel;
+    }
 
 }
