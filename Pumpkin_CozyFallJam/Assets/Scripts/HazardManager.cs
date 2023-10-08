@@ -11,7 +11,7 @@ public class HazardManager : MonoBehaviour
     [SerializeField] private GameObject candyStore;
     //[SerializeField] private TextMeshProUGUI gameTimerText;
 
-    private float gameTimer = 2f;//GameTimer
+    private float gameTimer = 180f;//GameTimer
 
     //public static HazardManager instance;
 
@@ -93,12 +93,12 @@ public class HazardManager : MonoBehaviour
             //gameTimerText.text = minutes.ToString();
             //if(minutes)
             //*
-            if (minutes >= 3f)
+            if (minutes >= 2f)
             {
                 hazardSpawnReset = 6f;
                 Debug.Log("STAGE 1");
             }
-            else if(minutes >= 1f && minutes < 3f)
+            else if(minutes >= 1f && minutes < 2f)
             {
                 hazardSpawnReset = 4f;
                 Debug.Log("STAGE 2");

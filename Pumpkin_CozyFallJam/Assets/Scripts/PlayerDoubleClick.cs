@@ -7,6 +7,7 @@ public class PlayerDoubleClick : MonoBehaviour
 
     [SerializeField] private Sprite onSprite;
     [SerializeField] private Sprite offSprite;
+    [SerializeField] private PlaySFX playSFX;
 
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D boxCollider;
@@ -26,6 +27,7 @@ public class PlayerDoubleClick : MonoBehaviour
         {
             boxCollider.enabled = false;
             spriteRenderer.sprite = offSprite;
+            playSFX.Play();
         }
 
     }
