@@ -16,7 +16,7 @@ public class SettingsController : MonoBehaviour
 
     [SerializeField] private VolumeSO volumeSO;
 
-    public GameObject settingsMenu;
+    [SerializeField] GameObject settingsMenu;
 
     private float musicVolumeVal = 0.5f;
     private float sfxVolumeVal = 0.5f;

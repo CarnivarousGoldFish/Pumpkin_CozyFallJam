@@ -438,7 +438,6 @@ GameObject:
   - component: {fileID: 212599907}
   - component: {fileID: 212599909}
   - component: {fileID: 212599908}
-  - component: {fileID: 212599910}
   m_Layer: 0
   m_Name: SettingsPanel
   m_TagString: Settings
@@ -504,18 +503,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212599906}
   m_CullTransparentMesh: 1
---- !u!114 &212599910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 212599906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0157c266b64e73147bd2d100663323a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &385985636
 GameObject:
   m_ObjectHideFlags: 0
@@ -1821,7 +1808,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -2371,6 +2358,7 @@ MonoBehaviour:
   musicSlider: {fileID: 1942829321}
   sfxSlider: {fileID: 1930564164}
   volumeSO: {fileID: 11400000, guid: b2247af8ea91dd4479e42549d07da5d1, type: 2}
+  settingsMenu: {fileID: 212599906}
 --- !u!1 &1874396835
 GameObject:
   m_ObjectHideFlags: 0
@@ -2529,10 +2517,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 659153526}
   m_HandleRect: {fileID: 2049397804}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.00001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.00001
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2619,10 +2607,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1874396836}
   m_HandleRect: {fileID: 455089184}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.00001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.00001
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2952,7 +2940,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2060403094}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1118817797}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2060403094
 MonoBehaviour:
   m_ObjectHideFlags: 0

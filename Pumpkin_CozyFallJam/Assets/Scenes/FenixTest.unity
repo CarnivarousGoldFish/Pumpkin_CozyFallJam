@@ -298,6 +298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 720568316}
   - component: {fileID: 720568315}
+  - component: {fileID: 720568318}
   - component: {fileID: 720568317}
   m_Layer: 3
   m_Name: pumpkin
@@ -347,7 +348,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: -774763555, guid: 4bfb123428df1474fa63065a29fa2d5e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -405,19 +406,40 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.21133333}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.397, y: 0.711}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.397, y: 0.711}
   m_EdgeRadius: 0
+--- !u!95 &720568318
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720568314}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bf345a74bb8300b478ae6e61816fd45d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &931876910
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +536,7 @@ Transform:
   m_GameObject: {fileID: 931876910}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.24, y: -2.24, z: 0}
+  m_LocalPosition: {x: -5.94, y: -2.47, z: 0}
   m_LocalScale: {x: 2.9227633, y: 2.4458103, z: 1.5181}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -590,8 +612,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hazardPrefab:
-  - {fileID: 2685135678373417117, guid: d3a702c682bb4e54785fd88b336761db, type: 3}
-  - {fileID: 2128726649735246462, guid: 591bb98b0bc83d74e8c2c94b33fe5e8b, type: 3}
+  - {fileID: 2128726649735246462, guid: 7bde0c73f00bf8243bc2b4336282e7dc, type: 3}
+  - {fileID: 2128726649735246462, guid: 7bde0c73f00bf8243bc2b4336282e7dc, type: 3}
   - {fileID: 2128726649735246462, guid: 7bde0c73f00bf8243bc2b4336282e7dc, type: 3}
   gameTimerText: {fileID: 283093222}
 --- !u!1 &1181419360
@@ -711,7 +733,7 @@ Transform:
   m_GameObject: {fileID: 1342584916}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.32, y: -1.02, z: -0.07397573}
+  m_LocalPosition: {x: 11.32, y: -1.53, z: -0.07397573}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

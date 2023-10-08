@@ -11,7 +11,7 @@ public class PlayerDoubleClick : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D boxCollider;
     private double doubleClickTimer = 0.25f;
-    private bool isDoubleClicking = false;
+    public bool isDoubleClicking = false;
 
     private void Start()
     {

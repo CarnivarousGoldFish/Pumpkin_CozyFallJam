@@ -11,7 +11,7 @@ public class ThiefMovement : MonoBehaviour
 
     private void Awake()
     {
-        startPositionObj = GameObject.Find("Manhole StartPosition");
+        startPositionObj = GameObject.Find("Thief StartPosition");
         exitObj = GameObject.Find("Exit");
         startPosition = startPositionObj.transform;
     }
