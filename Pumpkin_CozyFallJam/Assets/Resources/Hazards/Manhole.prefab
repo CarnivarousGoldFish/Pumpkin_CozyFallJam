@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6954073885124673648}
   - component: {fileID: 1874271319645756358}
   - component: {fileID: 8041509706887719646}
+  - component: {fileID: 5376693461439346339}
   m_Layer: 0
   m_Name: Manhole
   m_TagString: Untagged
@@ -134,7 +135,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.078985214, y: -1.8561506}
@@ -189,7 +190,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -6723480711813969486, guid: 9b13e76583012164bada0141dd6113c6, type: 2}
   m_audioClip: {fileID: 8300000, guid: 125256b7bb6fc074cba1c283c5be8a1e, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.734
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -273,3 +274,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!50 &5376693461439346339
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2685135678373417117}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

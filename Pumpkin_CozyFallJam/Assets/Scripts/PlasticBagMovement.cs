@@ -8,9 +8,11 @@ public class PlasticBagMovement : MonoBehaviour
 
     [SerializeField] private GameObject startPositionObj;
     [SerializeField] private GameObject exitObj;
+    [SerializeField] private BoxCollider2D collider2d;
     private Transform startPosition;
     private float movementPositionY;
     private float movementPositionX;
+    private int speed;
 
     private void Awake()
     {
@@ -22,16 +24,20 @@ public class PlasticBagMovement : MonoBehaviour
     private void Start()
     {
         transform.position = startPosition.position;
+        speed = 3;
     }
 
     // Update is called once per frame
     private void Update()
     {
 
+        if (!collider2d.enabled)
+            speed = 10;
+
         movementPositionY = Mathf.Sin(Time.time);
         //Debug.Log(movementPositionY);
         transform.position = new Vector3(transform.position.x, movementPositionY + startPosition.position.y, 0);
-        transform.Translate(new Vector3(-3 * Time.deltaTime, 0, 0));
+        transform.Translate(new Vector3(-speed * Time.deltaTime, 0, 0));
 
         if (transform.position.x < exitObj.transform.position.x)
             Exit();

@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 1077083575834527436}
   - component: {fileID: 7704270395017934316}
   - component: {fileID: 1894007456652285872}
+  - component: {fileID: -3779204870917511812}
+  - component: {fileID: -4099332816122425083}
   m_Layer: 6
   m_Name: Thief
   m_TagString: Hazard
@@ -105,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onSprite: {fileID: 21300000, guid: 44d6d1f4b5b828d479bfb005ea486f25, type: 3}
   offSprite: {fileID: 21300000, guid: 75698cf1271bdf647a3890b7a93337a6, type: 3}
-  playSFX: {fileID: 0}
+  playSFX: {fileID: 7704270395017934316}
   isDoubleClicking: 0
 --- !u!114 &-2765862649791749968
 MonoBehaviour:
@@ -171,7 +173,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.12581861, y: -0.7818725}
@@ -199,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6610e316da5f9fb4c9fb895a7d0ef861, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offSprite: {fileID: 21300000, guid: ea5ee0d7b02771f4993915fce370cd26, type: 3}
+  offSprite: {fileID: 21300000, guid: 8f4d69ba62b35494085289341f2643c9, type: 3}
 --- !u!114 &7704270395017934316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,9 +225,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -6723480711813969486, guid: 9b13e76583012164bada0141dd6113c6, type: 2}
-  m_audioClip: {fileID: 8300000, guid: b5159fddf0ea42340b93d99ebe3b3020, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 33d21145184a73c479c2a744e4137fa9, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.734
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -309,3 +311,49 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-3779204870917511812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128726649735246462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93baa276789f7444abef66a21beb475f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winnerText: {fileID: 0}
+  winnerOverlay: {fileID: 0}
+  winnerImage: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  shockSprite: {fileID: 0}
+  anim: {fileID: 0}
+  audioSrc: {fileID: 0}
+--- !u!50 &-4099332816122425083
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128726649735246462}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
