@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,27 +8,29 @@ public class HazardManager : MonoBehaviour
 {
 
     [SerializeField] private GameObject[] hazardPrefab;
-    [SerializeField] private TextMeshProUGUI gameTimerText;
+    [SerializeField] private GameObject candyStore;
+    //[SerializeField] private TextMeshProUGUI gameTimerText;
 
-    private float gameTimer = 300f;//GameTimer
+    private float gameTimer = 2f;//GameTimer
 
-    public static HazardManager instance;
+    //public static HazardManager instance;
 
     private float hazardSpawnInterval = 10;
     private float hazardSpawnReset = 10;
 
     private bool isGameStart = false;
+    private bool isGameEnd = false;
 
     
     private void Awake()
     {
-        instance = this;
-        GameDataManager.instance.onGameStart += StartTimer;
+        //instance = this;
+        
     }
     // Start is called before the first frame update
     void Start()
     {
-
+        GameDataManager.instance.onGameStart += StartTimer;
     }
 
     // Update is called once per frame
@@ -43,13 +46,18 @@ public class HazardManager : MonoBehaviour
             hazardSpawnInterval = hazardSpawnReset;
             int min = 0;
             int max = hazardPrefab.Length;
-            Instantiate(hazardPrefab[Random.Range(min, max)], new Vector3(Random.Range(0, 10), Random.Range(0, 10), 0), Quaternion.identity);
+            Instantiate(hazardPrefab[UnityEngine.Random.Range(min, max)], new Vector3(UnityEngine.Random.Range(0, 10), UnityEngine.Random.Range(0, 10), 0), Quaternion.identity);
             /*
             int index = Random.Range(0, hazardPrefab.Length);
             hazardPrefab[index].SetActive(true);
             //*/
 
             
+        }
+
+        if (isGameEnd)
+        {
+            candyStore.SetActive(true);
         }
 
 
@@ -82,20 +90,23 @@ public class HazardManager : MonoBehaviour
 
             
 
-            gameTimerText.text = minutes.ToString();
+            //gameTimerText.text = minutes.ToString();
             //if(minutes)
             //*
             if (minutes >= 3f)
             {
-                hazardSpawnReset = 10f;
+                hazardSpawnReset = 6f;
+                Debug.Log("STAGE 1");
             }
             else if(minutes >= 1f && minutes < 3f)
             {
-                hazardSpawnReset = 6f;
+                hazardSpawnReset = 4f;
+                Debug.Log("STAGE 2");
             }
             else if (minutes < 1f)
             {
-                hazardSpawnReset = 3f;
+                hazardSpawnReset = 2f;
+                Debug.Log("STAGE 3");
             }
 
             
@@ -103,6 +114,9 @@ public class HazardManager : MonoBehaviour
             yield return null;
 
         }
+        Debug.Log("END");
+        isGameEnd = true;
+
     }
     
 }

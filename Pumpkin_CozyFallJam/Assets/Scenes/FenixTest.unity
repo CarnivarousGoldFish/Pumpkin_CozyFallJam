@@ -468,13 +468,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931876910}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da409834d53640c46ae4b8a496ae83e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onSprite: {fileID: 0}
   offSprite: {fileID: 0}
+  isDoubleClicking: 0
 --- !u!212 &931876912
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -549,7 +550,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931876910}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -612,10 +613,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hazardPrefab:
+  - {fileID: 2685135678373417117, guid: d3a702c682bb4e54785fd88b336761db, type: 3}
+  - {fileID: 2128726649735246462, guid: 591bb98b0bc83d74e8c2c94b33fe5e8b, type: 3}
   - {fileID: 2128726649735246462, guid: 7bde0c73f00bf8243bc2b4336282e7dc, type: 3}
-  - {fileID: 2128726649735246462, guid: 7bde0c73f00bf8243bc2b4336282e7dc, type: 3}
-  - {fileID: 2128726649735246462, guid: 7bde0c73f00bf8243bc2b4336282e7dc, type: 3}
-  gameTimerText: {fileID: 283093222}
 --- !u!1 &1181419360
 GameObject:
   m_ObjectHideFlags: 0

@@ -29,7 +29,7 @@ public class PlasticBagMovement : MonoBehaviour
     {
 
         movementPositionY = Mathf.Sin(Time.time);
-        Debug.Log(movementPositionY);
+        //Debug.Log(movementPositionY);
         transform.position = new Vector3(transform.position.x, movementPositionY + startPosition.position.y, 0);
         transform.Translate(new Vector3(-3 * Time.deltaTime, 0, 0));
 

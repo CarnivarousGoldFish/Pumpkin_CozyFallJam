@@ -20,6 +20,7 @@ public class GameDataManager : MonoBehaviour
     {
 
         Invoke("GameStart", 1f);
+
         
     }
 
