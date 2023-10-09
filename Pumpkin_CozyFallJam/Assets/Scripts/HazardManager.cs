@@ -110,12 +110,12 @@ public class HazardManager : MonoBehaviour
             //*
             if (minutes >= 2f)
             {
-                hazardSpawnReset = 9f;
+                hazardSpawnReset = 6f;
                 Debug.Log("STAGE 1");
             }
             else if(minutes >= 1f && minutes < 2f)
             {
-                hazardSpawnReset = 7f;
+                hazardSpawnReset = 5f;
                 Debug.Log("STAGE 2");
             }
             else if (minutes < 1f)

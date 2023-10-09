@@ -6,6 +6,7 @@ public class ManholeMovement : MonoBehaviour
 {
     [SerializeField] private GameObject startPositionObj;
     [SerializeField] private GameObject exitObj;
+    [SerializeField] private float speed = 1;
     private Transform startPosition;
     private float moveSpeed = 3;
 
@@ -24,7 +25,7 @@ public class ManholeMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(new Vector3(-0.5f * Time.deltaTime, 0, 0));
+        transform.Translate(new Vector3(-speed * Time.deltaTime, 0, 0));
 
         if (transform.position.x < exitObj.transform.position.x)
             Exit();
